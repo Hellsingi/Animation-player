@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animation player</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles_reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+</head>
+
+<body>
+    <header id="menu">
+      <button class="menu_btn btn_active"><i class="fas fa-bars"></i></button>
+      <h1>Codejam - Animation-player</h1>
+      <button class="settings_btn btn_active"><i class="fas fa-ellipsis-v"></i></button>
+    </header>
+    <main id="pallete_canvas">
+      <section id="pallete">
+        <div class="tools">
+          <div class="tool bucket">
+            <i class="fas fa-fill-drip"></i>
+          </div>
+          <div class="tool colorful">
+            <i class="fas fa-eye-dropper"></i>
+          </div>
+          <input type="color" id="chooseColor" name="chooseColor" value="#e66465" />
+          <div class="tool transform">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+        </div>
+        <div class="colors">
+          <div class="color curr"></div>
+          <div class="color prev"></div>
+        </div>
+      </section>
+      <section id="frames">
+        <div class="frame">
+          <div class="frame_element"></div>
+          <div class="frame_element"></div>
+          <div class="frame_element"></div>
+          <div class="frame_element"></div>
+          <div class="frame_element"></div>
+          <div class="frame_element"></div>
+          <div class="frame_element"></div>
+          <div class="frame_element"></div>
+          <div class="frame_element"></div>
+          <div class="frame_tool frame_id"></div>
+          <div class="frame_tool frame_delete"></div>
+          <div class="frame_tool frame_move">
+            <i class="fas fa-arrows-alt"></i>
+          </div>
+          <div class="frame_tool frame_copy"></div>
+        </div>
+        <button class="btn_new_frame">
+          <i class="fas fa-plus"></i>
+          <span>Add new frame</span>
+        </button>
+      </section>
+      <section id="canvas_sect">
+        <div id="canvas"></div>
+      </section>
+      <section id="preview">
+        <div class="screen"></div>
+        <div class="fps_btns">
+          <button class="fps_2 btn" data-fps="2">2 FPS</button>
+          <button class="fps_4 btn" data-fps="4">4 FPS</button>
+          <button class="fps_8 btn" data-fps="8">8 FPS</button>
+        </div>
+        <div class="custom_fps">
+          <p>Custom FPS</p>
+          <input id="range" type="range" min="1" max="24" value="2" />
+          <p class="currFps">Current FPS</p>
+          <h3 class="currFpsValue">2</h3>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+
+</html>
